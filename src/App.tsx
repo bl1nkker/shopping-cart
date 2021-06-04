@@ -30,6 +30,7 @@ const App:React.FC = () => {
   const { data, isLoading } = useQuery<CartItemType[]>('products', fetchProducts)
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false)
   const [cartItems, setCartItems] = useState<CartItemType[] | []>([])
+  const lk = 123
 
   const getTotalItems = (items: CartItemType[]) =>{
     return (items.reduce((ack:number, item) => ack + item.amount, 0))
